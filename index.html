@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ParkSmart</title>
+<title>ParkControl</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
 <link rel="stylesheet" href="style.css">
@@ -24,14 +24,13 @@
   <!-- Nav -->
   <nav class="hp-nav" id="hp-nav">
     <div class="hp-nav-brand">
-      <div class="logo-icon-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 17V7h5a3 3 0 0 1 0 6H8"/></svg></div>
-      <span class="hp-nav-brand-text">ParkSmart</span>
+      <div class="logo-icon-sm"><img src="logo.svg" alt="ParkControl" width="32" height="32" style="object-fit:contain"></div>
+      <span class="hp-nav-brand-text">ParkControl</span>
     </div>
     <div class="hp-nav-right">
       <button class="hp-nav-link" onclick="document.querySelector('.hp-features').scrollIntoView({behavior:'smooth'})" data-t="hp_feat_tag">Veçoritë</button>
       <button class="hp-nav-link" onclick="document.querySelector('.hp-how').scrollIntoView({behavior:'smooth'})" data-t="hp_how_tag">Si Funksionon</button>
       <button class="hp-nav-link" onclick="document.querySelector('.hp-faq').scrollIntoView({behavior:'smooth'})" data-t="hp_faq_tag">FAQ</button>
-      <button class="hp-nav-link" onclick="document.querySelector('.hp-pricing').scrollIntoView({behavior:'smooth'})" data-t="hp_pricing_tag">Çmimet</button>
       <button class="hp-nav-link" onclick="toggleLang()" id="hp-lang-btn">EN</button>
       <button class="theme-toggle" onclick="toggleTheme()" style="width:32px;height:32px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="theme-icon-hp"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
       <button class="hp-btn-login" onclick="goToSystem()" data-t="hp_login">Hyr në Sistem</button>
@@ -57,7 +56,7 @@
       <div class="hp-mockup">
         <div class="hp-mockup-bar">
           <div class="hp-mockup-dot r"></div><div class="hp-mockup-dot y"></div><div class="hp-mockup-dot g"></div>
-          <div class="hp-mockup-url">app.parksmart.io/dashboard</div>
+          <div class="hp-mockup-url">app.parkcontrol.io/dashboard</div>
         </div>
         <div class="hp-mockup-body">
           <div class="hp-mock-side">
@@ -90,18 +89,6 @@
       <div class="hp-mockup-glow"></div>
     </div>
   </section>
-
-  <!-- TRUSTED BY -->
-  <div class="hp-trusted hp-reveal">
-    <p class="hp-trusted-label" data-t="hp_trusted">Besuar nga <strong>150+</strong> biznese ne Kosove dhe rajon</p>
-    <div class="hp-trusted-logos">
-      <div class="hp-trust-item"><span class="hp-trust-emoji">🏢</span> <span data-t="hp_trustcat1">Parkingje Private</span></div>
-      <div class="hp-trust-item"><span class="hp-trust-emoji">🏬</span> <span data-t="hp_trustcat2">Qendra Tregtare</span></div>
-      <div class="hp-trust-item"><span class="hp-trust-emoji">🏥</span> <span data-t="hp_trustcat3">Spitale &amp; Klinika</span></div>
-      <div class="hp-trust-item"><span class="hp-trust-emoji">🏨</span> <span data-t="hp_trustcat4">Hotele &amp; Resorte</span></div>
-      <div class="hp-trust-item"><span class="hp-trust-emoji">🎓</span> <span data-t="hp_trustcat5">Universitete</span></div>
-    </div>
-  </div>
 
   <!-- HOW IT WORKS -->
   <section class="hp-how hp-bg-accent hp-reveal">
@@ -141,7 +128,7 @@
     <div class="hp-section-label">
       <div class="hp-section-tag" data-t="hp_feat_tag">VEÇORITË</div>
       <div class="hp-section-title" data-t="hp_feat_title">Gjithçka që ju nevojitet</div>
-      <div class="hp-section-sub" data-t="hp_feat_sub">Nga regjistrimi i hyrjeve deri te analitika e avancuar — ParkSmart mbulon çdo aspekt.</div>
+      <div class="hp-section-sub" data-t="hp_feat_sub">Nga regjistrimi i hyrjeve deri te analitika e avancuar — ParkControl mbulon çdo aspekt.</div>
     </div>
     <div class="hp-features-grid">
       <div class="hp-feature-card hp-reveal hp-reveal-d1">
@@ -150,17 +137,17 @@
         <p data-t="hp_f1_desc">Shiko ne kohe reale cilat vende jane te lira, te zena ose VIP. Vizualizim i qarte me slot grid.</p>
       </div>
       <div class="hp-feature-card hp-reveal hp-reveal-d2">
-        <div class="hp-feature-icon green"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3L4 7l4 4"/><path d="M4 7h16"/><path d="M16 21l4-4-4-4"/><path d="M20 17H4"/></svg></div>
+        <div class="hp-feature-icon green"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8L22 12L18 16"/><path d="M2 12h20"/><path d="M6 16L2 12L6 8"/></svg></div>
         <h3 data-t="hp_f2_title">Hyrje/Dalje e Shpejtë</h3>
         <p data-t="hp_f2_desc">Regjistro hyrjet dhe daljet e mjeteve ne sekonda. Kalkulimi automatik i tarifes dhe kohes.</p>
       </div>
       <div class="hp-feature-card hp-reveal hp-reveal-d3">
-        <div class="hp-feature-icon gold"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+        <div class="hp-feature-icon gold"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16V8"/><path d="M11 16V11"/><path d="M15 16V14"/><path d="M19 16V6"/></svg></div>
         <h3 data-t="hp_f3_title">Raporte &amp; Analitika</h3>
         <p data-t="hp_f3_desc">Grafiku i te ardhurave, oret pik, analiza e detajuar mujore dhe ditore ne nje vend.</p>
       </div>
       <div class="hp-feature-card hp-reveal hp-reveal-d4">
-        <div class="hp-feature-icon purple"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+        <div class="hp-feature-icon purple"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg></div>
         <h3 data-t="hp_f4_title">Fatura &amp; Historiku</h3>
         <p data-t="hp_f4_desc">Printo fatura per cdo dalje, eksporto PDF, dhe shko historikun e plote te transaksioneve.</p>
       </div>
@@ -208,20 +195,20 @@
     </div>
   </section>
 
-  <!-- WHY PARKSMART -->
+  <!-- WHY PARKCONTROL -->
   <section class="hp-why hp-bg-accent hp-reveal">
     <div class="hp-section-label">
-      <div class="hp-section-tag" data-t="hp_why_tag">PSE PARKSMART</div>
+      <div class="hp-section-tag" data-t="hp_why_tag">PSE PARKCONTROL</div>
       <div class="hp-section-title" data-t="hp_why_title">Përparësitë tona</div>
-      <div class="hp-section-sub" data-t="hp_why_sub">Arsyet kryesore pse bizneset zgjedhin ParkSmart çdo ditë.</div>
+      <div class="hp-section-sub" data-t="hp_why_sub">Arsyet kryesore pse bizneset zgjedhin ParkControl çdo ditë.</div>
     </div>
     <div class="hp-why-grid">
       <div class="hp-why-item hp-reveal hp-reveal-d1">
-        <div class="hp-why-check"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="hp-why-check"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <div><h4 data-t="hp_why1_title">Setup brenda 2 minutave</h4><p data-t="hp_why1_desc">Regjistrohu, konfiguro vendparkingun, dhe fillo menaxhimin menjëherë. Zero pritje.</p></div>
       </div>
       <div class="hp-why-item hp-reveal hp-reveal-d2">
-        <div class="hp-why-check"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.77 4 4 0 0 1 0 6.76 4 4 0 0 1-4.78 4.77 4 4 0 0 1-6.74 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="hp-why-check"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg></div>
         <div><h4 data-t="hp_why2_title">100% Falas për të filluar</h4><p data-t="hp_why2_desc">Asnjë pagesë fillestare, asnjë kartë krediti. Fillo falas dhe zgjero sipas nevojës.</p></div>
       </div>
       <div class="hp-why-item hp-reveal hp-reveal-d3">
@@ -247,7 +234,7 @@
     <div class="hp-test-grid">
       <div class="hp-test-card hp-reveal hp-reveal-d1">
         <div class="hp-test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="hp-test-text" data-t="hp_test1_text">Kemi kaluar nga fletorja ne ParkSmart dhe nuk po e besoj sa kohe kursejm. Raportet jane fantastike.</p>
+        <p class="hp-test-text" data-t="hp_test1_text">Kemi kaluar nga fletorja ne ParkControl dhe nuk po e besoj sa kohe kursejm. Raportet jane fantastike.</p>
         <div class="hp-test-author">
           <div class="hp-test-av">A</div>
           <div><div class="hp-test-name">Arben K.</div><div class="hp-test-role" data-t="hp_test1_role">Pronar Parkingu, Prishtinë</div></div>
@@ -272,103 +259,21 @@
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="hp-pricing hp-bg-dots hp-reveal">
-    <div class="hp-section-label">
-      <div class="hp-section-tag" data-t="hp_pricing_tag">ÇMIMET</div>
-      <div class="hp-section-title" data-t="hp_pricing_title">Zgjidhni planin tuaj</div>
-      <div class="hp-section-sub" data-t="hp_pricing_sub">Filloni falas dhe zgjerohuni sipas rritjes së biznesit tuaj.</div>
-    </div>
-    <div class="hp-pricing-toggle">
-      <div class="hp-pricing-toggle-wrap">
-        <button class="hp-pricing-toggle-btn active" data-period="monthly" onclick="togglePricing(false)" data-t="hp_pricing_monthly">Mujore</button>
-        <button class="hp-pricing-toggle-btn" data-period="yearly" onclick="togglePricing(true)" data-t="hp_pricing_yearly">Vjetore</button>
-      </div>
-      <span class="hp-pricing-save" data-t="hp_pricing_save">Kurse 20%</span>
-    </div>
-    <div class="hp-pricing-grid">
-      <!-- Basic -->
-      <div class="hp-plan hp-reveal hp-reveal-d1">
-        <div class="hp-plan-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></div>
-        <div class="hp-plan-name">Basic</div>
-        <div class="hp-plan-desc" data-t="hp_plan_basic_desc">Perfekt për parkingje të vogla deri në 20 vende.</div>
-        <div class="hp-plan-price-wrap">
-          <div class="hp-plan-price-old" id="price-old-basic">&nbsp;</div>
-          <div class="hp-plan-price" id="price-basic">€10</div>
-          <div class="hp-plan-period" id="price-period-basic" data-t="hp_per_month">/ muaj</div>
-        </div>
-        <div class="hp-plan-divider"></div>
-        <ul class="hp-plan-features">
-          <li data-t="hp_plan_b1">Deri në 20 vende parkimi</li>
-          <li data-t="hp_plan_b2">Dashboard në kohë reale</li>
-          <li data-t="hp_plan_b3">Raporte ditore</li>
-          <li data-t="hp_plan_b4">Fatura bazike</li>
-          <li data-t="hp_plan_b5">Email support</li>
-        </ul>
-        <button class="hp-plan-btn" onclick="goToSystem()" data-t="hp_plan_start">Fillo Falas →</button>
-      </div>
-      <!-- Pro -->
-      <div class="hp-plan popular hp-reveal hp-reveal-d2">
-        <div class="hp-plan-pop-badge" data-t="hp_plan_popular">MË I POPULLUARI</div>
-        <div class="hp-plan-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div class="hp-plan-name">Pro</div>
-        <div class="hp-plan-desc" data-t="hp_plan_pro_desc">Për biznese që duan kontroll të plotë dhe analitikë të avancuar.</div>
-        <div class="hp-plan-price-wrap">
-          <div class="hp-plan-price-old" id="price-old-pro">&nbsp;</div>
-          <div class="hp-plan-price" id="price-pro">€45</div>
-          <div class="hp-plan-period" id="price-period-pro" data-t="hp_per_month">/ muaj</div>
-        </div>
-        <div class="hp-plan-divider"></div>
-        <ul class="hp-plan-features">
-          <li data-t="hp_plan_p1">Deri në 100 vende parkimi</li>
-          <li data-t="hp_plan_p2">Analitikë e avancuar</li>
-          <li data-t="hp_plan_p3">Raporte mujore &amp; javore</li>
-          <li data-t="hp_plan_p4">Eksporto PDF &amp; Excel</li>
-          <li data-t="hp_plan_p5">Fatura profesionale</li>
-          <li data-t="hp_plan_p6">Prioritet support 24/7</li>
-        </ul>
-        <button class="hp-plan-btn" onclick="goToSystem()" data-t="hp_plan_start">Fillo Falas →</button>
-      </div>
-      <!-- Business -->
-      <div class="hp-plan hp-reveal hp-reveal-d3">
-        <div class="hp-plan-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M9 20V8l3-5 3 5v12"/><path d="M4 20V14l4-4"/><path d="M20 20V14l-4-4"/><rect x="9" y="12" width="6" height="8"/></svg></div>
-        <div class="hp-plan-name">Business</div>
-        <div class="hp-plan-desc" data-t="hp_plan_biz_desc">Zgjidhja enterprise për parkingje të mëdha dhe zinxhirë.</div>
-        <div class="hp-plan-price-wrap">
-          <div class="hp-plan-price-old" id="price-old-business">&nbsp;</div>
-          <div class="hp-plan-price" id="price-business">€99</div>
-          <div class="hp-plan-period" id="price-period-business" data-t="hp_per_month">/ muaj</div>
-        </div>
-        <div class="hp-plan-divider"></div>
-        <ul class="hp-plan-features">
-          <li data-t="hp_plan_bz1">Vende parkimi pa limit</li>
-          <li data-t="hp_plan_bz2">Multi-lokacion dashboard</li>
-          <li data-t="hp_plan_bz3">API access</li>
-          <li data-t="hp_plan_bz4">Raporte të personalizuara</li>
-          <li data-t="hp_plan_bz5">Dedicated account manager</li>
-          <li data-t="hp_plan_bz6">SLA 99.9% uptime</li>
-          <li data-t="hp_plan_bz7">Onboarding i dedikuar</li>
-        </ul>
-        <button class="hp-plan-btn" onclick="goToSystem()" data-t="hp_plan_contact">Na Kontaktoni →</button>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section class="hp-faq hp-bg-accent hp-reveal">
     <div class="hp-section-label">
       <div class="hp-section-tag" data-t="hp_faq_tag">PYETJE TË SHPESHTA</div>
       <div class="hp-section-title" data-t="hp_faq_title">Keni pyetje?</div>
-      <div class="hp-section-sub">Gjeni përgjigjet për pyetjet më të shpeshta rreth ParkSmart.</div>
+      <div class="hp-section-sub">Gjeni përgjigjet për pyetjet më të shpeshta rreth ParkControl.</div>
     </div>
     <div class="hp-faq-list">
       <div class="hp-faq-item hp-reveal hp-reveal-d1" onclick="this.classList.toggle('open')">
-        <div class="hp-faq-q"><span data-t="hp_faq1_q">A eshte ParkSmart falas?</span><span class="hp-faq-arrow">&#9658;</span></div>
-        <div class="hp-faq-a" data-t="hp_faq1_a">Po! ParkSmart eshte plotesisht falas per te filluar. Nuk ka pagesa te fshehura.</div>
+        <div class="hp-faq-q"><span data-t="hp_faq1_q">A eshte ParkControl falas?</span><span class="hp-faq-arrow">&#9658;</span></div>
+        <div class="hp-faq-a" data-t="hp_faq1_a">Po! ParkControl eshte plotesisht falas per te filluar. Nuk ka pagesa te fshehura.</div>
       </div>
       <div class="hp-faq-item hp-reveal hp-reveal-d2" onclick="this.classList.toggle('open')">
         <div class="hp-faq-q"><span data-t="hp_faq2_q">A funksionon ne telefon?</span><span class="hp-faq-arrow">&#9658;</span></div>
-        <div class="hp-faq-a" data-t="hp_faq2_a">Absolutisht. ParkSmart eshte dizajnuar mobile-first dhe punon perfekt ne cdo pajisje.</div>
+        <div class="hp-faq-a" data-t="hp_faq2_a">Absolutisht. ParkControl eshte dizajnuar mobile-first dhe punon perfekt ne cdo pajisje.</div>
       </div>
       <div class="hp-faq-item hp-reveal hp-reveal-d3" onclick="this.classList.toggle('open')">
         <div class="hp-faq-q"><span data-t="hp_faq3_q">Sa vende parkingu mund te menaxhoj?</span><span class="hp-faq-arrow">&#9658;</span></div>
@@ -391,7 +296,7 @@
       <div class="hp-cta-final-content">
         <div class="hp-cta-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
         <h2 data-t="hp_cta2_title">Fillo ta menaxhosh parkingun si profesionist</h2>
-        <p data-t="hp_cta2_sub">Bashkohu me qindra biznese qe kane zgjedhur ParkSmart. Krijo llogarite falas brenda 30 sekondave.</p>
+        <p data-t="hp_cta2_sub">Bashkohu me qindra biznese qe kane zgjedhur ParkControl. Krijo llogarite falas brenda 30 sekondave.</p>
         <div class="hp-cta-final-btns">
           <button class="hp-btn-big hp-btn-primary hp-btn-glow" onclick="goToSystem()" data-t="hp_cta2_btn">Fillo Falas Tani &#8594;</button>
         </div>
@@ -405,8 +310,8 @@
     <div class="hp-footer-top">
       <div class="hp-footer-brand">
         <div class="hp-footer-logo">
-          <div class="logo-icon-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 17V7h5a3 3 0 0 1 0 6H8"/></svg></div>
-          <span class="hp-footer-brand-text">ParkSmart</span>
+          <div class="logo-icon-sm"><img src="logo.svg" alt="ParkControl" width="32" height="32" style="object-fit:contain"></div>
+          <span class="hp-footer-brand-text">ParkControl</span>
         </div>
         <p class="hp-footer-desc" data-t="hp_footer_desc">Platforma lider per menaxhimin inteligjent te parkingut ne Kosove dhe rajon.</p>
         <div class="hp-footer-social" style="margin-top:16px">
@@ -437,7 +342,7 @@
       </div>
     </div>
     <div class="hp-footer-bottom">
-      <p>&copy; 2026 ParkSmart. <span data-t="hp_footer_rights">Te gjitha te drejtat e rezervuara.</span></p>
+      <p>&copy; 2026 ParkControl. <span data-t="hp_footer_rights">Te gjitha te drejtat e rezervuara.</span></p>
       <p class="hp-footer-made">Made with &#9829; in Kosovë</p>
     </div>
   </footer>
@@ -445,9 +350,9 @@
 
 <!-- LOADING -->
 <div class="loading-overlay" id="loading">
-  <div class="logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 17V7h5a3 3 0 0 1 0 6H8"/></svg></div>
+  <div class="logo-icon"><img src="logo.svg" alt="ParkControl" width="40" height="40" style="object-fit:contain"></div>
   <div class="spinner"></div>
-  <div class="loading-text" data-t="loading">Duke ngarkuar ParkSmart...</div>
+  <div class="loading-text" data-t="loading">Duke ngarkuar ParkControl...</div>
 </div>
 
 <!-- AUTH -->
@@ -459,8 +364,8 @@
     </div>
     <div class="auth-logo">
       <button onclick="show('homepage')" style="position:absolute;top:16px;left:16px;padding:6px 12px;border-radius:8px;border:1px solid var(--border);background:var(--hover-bg);color:var(--text2);font-size:.78rem;cursor:pointer;display:flex;align-items:center;gap:4px;transition:.2s" onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary-l)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text2)'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> <span data-t="hp_back">Kthehu</span></button>
-      <div class="auth-logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 17V7h5a3 3 0 0 1 0 6H8"/></svg></div>
-      <h1>ParkSmart</h1>
+      <div class="auth-logo-icon"><img src="logo.svg" alt="ParkControl" width="44" height="44" style="object-fit:contain"></div>
+      <h1>ParkControl</h1>
       <p data-t="auth_sub">Menaxhimi profesional i parkingut</p>
     </div>
     <div class="auth-tabs">
@@ -503,7 +408,7 @@
 <!-- SETUP -->
 <div class="setup-screen" id="setup-screen" style="display:none">
   <div class="setup-box">
-    <div style="display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#3b82f6,#6366f1);color:#fff;margin-bottom:20px;box-shadow:0 0 24px rgba(59,130,246,.4)"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M9 20V8l3-5 3 5v12"/><path d="M4 20V14l4-4"/><path d="M20 20V14l-4-4"/><rect x="9" y="12" width="6" height="8"/></svg></div>
+    <div style="display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:14px;background:transparent;margin-bottom:20px"><img src="logo.svg" alt="ParkControl" width="56" height="56" style="object-fit:contain"></div>
     <h2 data-t="setup_title">Konfiguro Parkingun Tuaj</h2>
     <p data-t="setup_sub">Shtoni informacionet bazë. Mund t'i ndryshoni gjithmonë nga Cilësimet.</p>
     <div class="auth-msg err" id="setup-err"><span></span></div>
@@ -516,7 +421,7 @@
       <div class="form-group"><label class="form-label" data-t="rate_normal">€/orë Normal</label><input class="form-input" id="setup-rn" type="number" step="0.01" value="0.80"></div>
       <div class="form-group"><label class="form-label" data-t="rate_vip">€/orë VIP</label><input class="form-input" id="setup-rv" type="number" step="0.01" value="1.50"></div>
     </div>
-    <button class="btn-auth" style="margin-top:8px" onclick="createParking()" data-t="setup_btn">Fillo me ParkSmart →</button>
+    <button class="btn-auth" style="margin-top:8px" onclick="createParking()" data-t="setup_btn">Fillo me ParkControl →</button>
   </div>
 </div>
 
@@ -525,8 +430,8 @@
   <div class="layout">
     <nav class="sidebar" id="sidebar">
       <div class="sidebar-logo">
-        <div class="logo-icon-sm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 17V7h5a3 3 0 0 1 0 6H8"/></svg></div>
-        <div><div class="logo-text">ParkSmart</div><div class="logo-sub">Professional</div></div>
+        <div class="logo-icon-sm"><img src="logo.svg" alt="ParkControl" width="32" height="32" style="object-fit:contain"></div>
+        <div><div class="logo-text">ParkControl</div><div class="logo-sub">Professional</div></div>
       </div>
       <div class="sidebar-section" data-t="nav_main">Kryesore</div>
       <button class="nav-item active" onclick="nav('dashboard',this)"><span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span> Dashboard</button>
@@ -712,9 +617,20 @@
     <div class="modal-title" data-t="confirm_exit">Konfirmo Daljen</div>
     <button class="modal-close" onclick="closeCheckout()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <div id="co-info" style="margin-bottom:16px;font-size:.85rem;color:var(--text2)"></div>
+    <div class="co-breakdown" id="co-breakdown"></div>
     <div class="total-box">
       <div><div class="total-label" data-t="total_pay">Totali për pagesë</div><div class="total-dur" id="co-dur"></div></div>
       <div class="total-amount" id="co-fee">0.00 €</div>
+    </div>
+    <div class="co-override">
+      <label class="co-override-toggle" id="co-override-toggle">
+        <input type="checkbox" id="co-override-check" onchange="toggleOverride()">
+        <span data-t="co_manual_edit">Ndrysho çmimin manualisht</span>
+      </label>
+      <div class="co-override-field" id="co-override-field">
+        <span class="co-override-currency">€</span>
+        <input type="number" id="co-override-input" step="0.01" min="0" placeholder="0.00" oninput="applyOverride()">
+      </div>
     </div>
     <div class="modal-actions">
       <button class="btn btn-ghost" onclick="closeCheckout()" data-t="cancel">Anulo</button>
